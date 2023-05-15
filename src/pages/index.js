@@ -11,7 +11,7 @@ export default function Home() {
   } = useForm()
   
   const handleLogin = () => {
-    const formData = JSON.stringify(getValues())
+    const formData = JSON.stringify(getValues(), null, 1)
     alert(formData);
   }
 
