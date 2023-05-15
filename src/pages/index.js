@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,8 +11,8 @@ export default function Home() {
   } = useForm()
   
   const handleLogin = () => {
-    const formData = getValues()
-    console.log({formData});
+    const formData = JSON.stringify(getValues())
+    alert(formData);
   }
 
   return (
